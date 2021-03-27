@@ -27,8 +27,17 @@ attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a h
 tileSize: 512,
 maxZoom: 18,
 zoomOffset: -1,
-id: 'mapbox/streets-v11',
+//id: 'mapbox/streets-v11',
+id: 'mapbox/dark-v10',
 accessToken: API_KEY
 });
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
+
+//  Add a marker to the map for Los Angeles, California.
+let marker = L.circleMarker([34.0522, -118.2437], {
+    radius: 300,
+    color: 'black',
+    fillColor: '#ffffa1'
+}).addTo(map);
+
